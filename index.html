@@ -6,60 +6,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href="./node_modules/fullpage.js/dist/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
     <link rel="stylesheet" href="./style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./menu-mob.js"></script>
     <script src="./node_modules/fullpage.js/vendors/easings.min.js"></script>
     <script type="text/javascript" src="./node_modules/fullpage.js/dist/fullpage.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script src="./index.js"></script>
   </head>
   <body>
     <header>
       <div class="container header__container">
         <div class="header__wrap">
-        <nav class="menu menu__left-part">
-          <ul>
-            <li><a href="">Персона</a></li>
-            <li>
-              <a href="">Ректор</a>
-              <ul class="sub__menu">
-                <li><a href="">Історія ректорства</a></li>
-                <li><a href="">Університети</a></li>
-                <li><a href="">Книги</a></li>
-              </ul>
-            </li>
-            <li><a href="">Проєкти</a></li>
-          </ul>
-        </nav>
-        <a class="logo" href=""> <img src="./images/logo-poplavskiy.svg" alt="" /></a>
-        <nav class="menu menu__right-part">
-          <ul>
-            <li><a href="">Ресторатор</a></li>
-            <li><a href="">Творчість</a></li>
-            <li><a href="">Галерея</a></li>
-          </ul>
-        </nav>
-        <a class="mobile__menu-btn">
-          <span class="close"
-            ><svg class="icon-inst" width="18" height="10">
-              <use href="./images/symbol-defs.svg#icon-menu"></use>
-            </svg>
-            Меню</span>
-          <span class="open"
-            ><svg class="icon-inst" width="18" height="18">
-              <use href="./images/symbol-defs.svg#icon-close"></use></svg>
+          <nav class="menu menu__left-part">
+            <ul class="menu__list">
+              <li><a href="">Персона</a></li>
+              <li>
+                <a href="">Ректор</a>
+                <ul class="sub__menu">
+                  <li><a href="">Історія ректорства</a></li>
+                  <li><a href="">Університети</a></li>
+                  <li><a href="">Книги</a></li>
+                </ul>
+              </li>
+              <li><a href="">Проєкти</a></li>
+            </ul>
+          </nav>
+          <a class="logo" href=""> <img src="./images/logo-poplavskiy.svg" alt="" /></a>
+          <nav class="menu menu__right-part">
+            <ul class="menu__list">
+              <li><a href="">Ресторатор</a></li>
+              <li><a href="">Творчість</a></li>
+              <li><a href="">Галерея</a></li>
+            </ul>
+          </nav>
+          <a class="mobile__menu-btn">
+            <span class="close"
+              ><svg class="icon-inst" width="18" height="10">
+                <use href="./images/symbol-defs.svg#icon-menu"></use>
+              </svg>
+              Меню</span
+            >
+            <span class="open"
+              ><svg class="icon-inst" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
             </span>
-        </a>
+          </a>
+        </div>
       </div>
-    <div class="mobile__menu-container">
-        
-    </div>
-</div>
+      <div class="mobile__menu-container"></div>
     </header>
     <main>
       <div id="fullpage">
-        <div class="section"><div class="container"></div></div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
+        <div class="section person" style="background-image: url(./images/persona.png)">
+          <div class="container person__container"></div>
+        </div>
+        <div class="section biography">
+          <div class="container">
+            <div class="biography__wrap">
+              <div class="biography__left-part">
+                <span>Михайло Поплавський</span>
+                <h2>Біографія</h2>
+                <div class="base__text">
+                  <p>
+                    Українська кухня – така ж культурна спадщина нашого народу, як мова, література, мистецтво. Це
+                    неоціненний здобуток, яким варто пишатися і не слід забувати. Українська кухня створювалася протягом
+                    багатьох віків, тому вона в певній мірі відбиває історичний розвиток українського народу, його
+                    звичаї, традиції та культуру. Сьогодні, коли продовольчий ринок переповнений фаст-фудами та
+                    продуктами з канцерогенами та хімічними домішками, дуже важливо зберігати та передавати з покоління
+                    в покоління рецептуру приготування національних домашніх українських страв, пропагувати здорову та
+                    корисну їжу, особливо серед молоді, адже споживання її закладено нам генетично. Українська кухня –
+                    така ж культурна спадщина нашого народу, як мова, література, мистецтво. Це неоціненний здобуток,
+                    яким варто пишатися і не слід забувати. Українська кухня створювалася протягом багатьох віків, тому
+                    вона в певній мірі відбиває історичний розвиток українського народу, його звичаї, традиції та
+                    культуру. Сьогодні, коли продовольчий ринок переповнений фаст-фудами та продуктами з канцерогенами
+                    та хімічними домішками, дуже важливо зберігати та передавати з покоління в покоління рецептуру
+                    приготування національних домашніх українських страв, пропагувати здорову та корисну їжу, особливо
+                    серед молоді, адже споживання її закладено нам генетично.
+                  </p>
+                </div>
+                <a href=""
+                  ><span>
+                    <svg class="icon-inst" width="10" height="10">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use></svg></span>
+                  Історія рoду</a
+                >
+              </div>
+              <div class="biography__right-part">
+                <div class="your-class">
+                  <div><img src="./images/biog.png" alt="" /></div>
+                  <div><img src="./images/persona.png" alt="" /></div>
+                  <div><img src="./images/biog.png" alt="" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section history">
+          <div class="container">
+            <div class="history__wrap">
+              <div class="history__right-part">
+                <span>Михайло Поплавський</span>
+                <h2>Історія роду</h2>
+                <div class="base__text">
+                  <p>
+                    Прізвище Поплавський відповідно до існуючих джерел відоме в Україні з середини XVII століття. В
+                    «Реєстрі Війська Запорозького 1649 року» значаться три козаки із прізвищем Поплавський: Поплавський
+                    Лук’ян — Ніжинський полк; Поплавський Григорій — Корсунський полк; Поплавський Адам — Миргородський
+                    полк. Поплавський Антоній (1739–1786) — польський письменник і педагог, ректор і професор семінарії
+                    у Кракові. У книзі «Дворянство Волынской губернии» за 1867 рік значиться Поплавський Францишек —
+                    депутат Волинських депутатських зборів від Старокостянтинівського повіту.
+                    Прізвище Поплавський відповідно до існуючих джерел відоме в Україні з середини XVII століття. В «Реєстрі Війська Запорозького 1649 року» значаться три козаки із прізвищем Поплавський: Поплавський Лук’ян — Ніжинський полк; Поплавський Григорій — Корсунський полк; Поплавський Адам — Миргородський полк. Поплавський Антоній (1739–1786) — польський письменник і педагог, ректор і професор семінарії у Кракові.
+
+У книзі «Дворянство Волынской губернии» за 1867 рік значиться Поплавський Францишек — депутат Волинських депутатських зборів від Старокостянтинівського повіту.
+                  </p>
+                </div>
+                <a href=""
+                  ><span>
+                    <svg class="icon-inst" width="10" height="10">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use></svg></span>
+                  Історія рoду</a
+                >
+              </div>
+              <div class="history__left-part">
+                <img src="./images/history1.png" alt="">
+                <img src="./images/history2.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="section">Some section</div>
       </div>
     </main>

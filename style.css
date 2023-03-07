@@ -3,12 +3,10 @@
 
 :root {
   --main-light-color: #ffffff;
-  --main-black-color: #222222;
-  --main-dark-blue-color: #053778;
-  --main-blue-color: #003e7d;
-  --main-yellow-color: #f5d665;
-  --main-gold-color: #e2cf8a;
-  --main-gray-color: #666666;
+  --main-black-color: #292929;
+  --main-blue-color: #3066c2;
+  --main-yellow-color: #F1BD06;
+  --main-gray-color: #32373A;
 }
 
 *,
@@ -60,8 +58,7 @@ header,
 footer {
   width: 100%;
   position: fixed;
-  background: #e1ecff;
-  opacity: 0.8;
+  background: rgba(225, 236, 255, 0.8);
 }
 header {
   top: 0;
@@ -85,6 +82,22 @@ padding-bottom: 48px;
 }
 .menu{
     display: none;
+    font-weight: 500;
+    font-size: 22px;
+    color: #3066c2;
+}
+
+.menu li:hover,
+.menu li:focus{
+font-weight: 700;
+}
+.menu li:hover::after,
+.menu li:focus::after{
+content: "";
+display: block;
+width: 104px;
+height: 4px;
+background: #F1BD06;
 }
 .open{
     display: none;
@@ -111,13 +124,31 @@ padding-bottom: 48px;
  .menu.active{
     display: block;
     position: absolute;
+    text-align: center
 }
 .menu__right-part,
 .menu__left-part{
 
 }
-footer {
+.mobile__menu-container{  
+    background: #E2EDFF;
+}
+.person{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.base__text p{
+    overflow-y: scroll;
+    height: 200px;
+    font-weight: 500;
+font-size: 12px;
+line-height: 120%;
+color: var(--main-gray-color);
+text-align: right;
 
+}
+footer {
   bottom: 0;
 }
 .footer__container {
@@ -157,12 +188,55 @@ footer {
 
 @media screen and (min-width: 1024px) {
     .header__container{
-        padding-top: 37px;
-        padding-bottom: 89px;
+        padding-top: 29px;
+        padding-bottom: 80px;
         }
+    .mobile__menu-btn{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .menu__list{
+        display: flex;
+    }
+    .menu__list li{
+        font-weight: 400;
+    }
+    .menu li{
+        margin-right: 70px;
+        width: 113px;
+        text-align: center;
+    }
+    .menu li:last-child{
+        margin-right: 0;
+    }
+    .menu li:hover::after,
+.menu li:focus::after{
+width: 112px;
+margin: 0 auto;
+}
+.biography__wrap,
+.history__wrap{
+    display: flex;
+    align-items: center;
+}
+.biography__left-part,
+.biography__right-part,
+.history__left-part,
+.history__right-part
+{
+    width: 50%;
+    height: 100%;
+}
+.base__text p{
+text-align: start;
+font-size: 22px;
+letter-spacing: -0.02em;
+}
   .footer__container {
-    padding-top: 83px;
-    padding-bottom: 34px;
+    padding-top: 78px;
+    padding-bottom: 30px;
   }
   .footer__left-part,
   .footer__right-part {
