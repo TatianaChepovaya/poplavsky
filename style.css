@@ -138,16 +138,31 @@ background: #F1BD06;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.base__text p{
+.base__text {
     overflow-y: scroll;
+}
+.base__text p{
     height: 200px;
     font-weight: 500;
 font-size: 12px;
 line-height: 120%;
 color: var(--main-gray-color);
 text-align: right;
-
 }
+
+.base__text::-webkit-scrollbar {
+    width: 3px;/* ширина для вертикального скролла */
+    background-color: #DADADA;
+}
+
+/* ползунок скроллбара */
+.base__text::-webkit-scrollbar-thumb {
+    background-color: var(--main-blue-color);
+    display: block;
+   width: 7px !important;
+   height: 57px;
+}
+
 footer {
   bottom: 0;
 }
@@ -171,6 +186,12 @@ footer {
 }
 .footer__left-part li:last-child {
   margin-right: 0;
+}
+.footer__left-part li:hover,
+.footer__left-part li:focus,
+.footer__right-part .footer__icons:hover{
+    background-color: var(--main-light-color);
+    border-radius: 50%;
 }
 .footer__icons {
   display: flex;
