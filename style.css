@@ -27,7 +27,7 @@ body {
   font-style: normal;
   margin: 0;
 }
-h1 {
+h2 {
   font-family: 'Gotham Pro', sans-serif;
 }
 a {
@@ -137,6 +137,27 @@ background: #F1BD06;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.title{
+  display: block;
+font-weight: 700;
+font-size: 45px;
+  background: linear-gradient(90deg, #0075FF 0%, rgba(48, 136, 49, 0) 120.32%);
+border-radius: 20px;
+width: fit-content;
+padding: 14px 60px 10px 20px;
+color: var(--main-light-color);
+}
+.title__label{
+  font-weight: 700;
+font-size: 22px;
+  padding: 11px 18px 9px 18px;
+  background: #FFFFFF;
+border-radius: 27px;
+width: fit-content;
+}
+.title__label::after{
+  
 }
 .base__text {
     overflow-y: scroll;

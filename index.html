@@ -64,14 +64,23 @@
     <main>
       <div id="fullpage">
         <div class="section person" style="background-image: url(./images/persona.png)">
-          <div class="container person__container"></div>
+          <div class="container person__container">
+            <div class="title__label">Михайло Поплавський</div>
+            <h1 class="title">Персона</h1>
+            <a href="">
+              <span> <svg class="svg-icon_arrow">
+                <use xlink:href="#icon-arrow-btn-bottom"></use>
+              </svg>
+        </span>Детальніше
+            </a>
+          </div>
         </div>
         <div class="section biography">
           <div class="container">
             <div class="biography__wrap">
               <div class="biography__left-part">
                 <span>Михайло Поплавський</span>
-                <h2>Біографія</h2>
+                <h2 class="secondary__title">Біографія</h2>
                 <div class="base__text">
                   <p>
                     Українська кухня – така ж культурна спадщина нашого народу, як мова, література, мистецтво. Це
@@ -112,7 +121,7 @@
             <div class="history__wrap">
               <div class="history__right-part">
                 <span>Михайло Поплавський</span>
-                <h2>Історія роду</h2>
+                <h2 class="secondary__title">Історія роду</h2>
                 <div class="base__text">
                   <p>
                     Прізвище Поплавський відповідно до існуючих джерел відоме в Україні з середини XVII століття. В
@@ -198,6 +207,11 @@
         </div>
       </div>
     </footer>
+    <svg id="icon-arrow-btn-bottom" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.8418 1.21881V10.4626"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10.1992 6.10516L5.84167 10.4627L1.48413 6.10516"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      
     <script>
       new fullpage('#fullpage', {
         autoScrolling: true,
