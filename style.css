@@ -57,19 +57,62 @@ img {
 .fp-table {
   display: block;
 }
+.fp-is-overflow .fp-overflow.fp-auto-height-responsive,
+.fp-is-overflow .fp-overflow.fp-auto-height,
+.fp-is-overflow>.fp-overflow{
+  overflow-y: inherit;
+}
+
 header,
 footer {
   width: 100%;
   position: fixed;
+
+}
+.header__inner,
+.footer__inner {
   background: rgba(225, 236, 255, 0.8);
 }
 header {
   top: 0;
   z-index: 50;
 }
+.corners{
+  position: relative;
+}
+.corner {
+            background: radial-gradient(circle at 100% 36%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(225, 236, 255, 0.8) 50%, rgba(225, 236, 255, 0.8) 100% );
+            background-size: 100% 200%;
+            height: 85px;
+            width: 57px;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+        }
+
+        .top-right {
+            left: auto;
+            right: 0;
+            transform: scale(-1, 1);
+        }
+
+        .bottom-left {
+            top: auto;
+            left: 0;
+            bottom: 0;
+            transform: scale(1, -1);
+        }
+        .bottom-right {
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+            transform: rotate(180deg);
+        }
+
 .header__container {
   padding-top: 20px;
-  padding-bottom: 48px;
+  padding-bottom: 16px;
 }
 .header__wrap {
   display: flex;
@@ -258,11 +301,16 @@ color: var(--main-blue-color);
   stroke: var(--main-blue-color);
   rotate: -90deg;
 }
+.biography__right-part .slick-slide img{
+  height: 100vh;
+  object-fit: cover;
+  object-position: right;
+}
 footer {
   bottom: 0;
 }
 .footer__container {
-  padding-top: 49px;
+  padding-top: 17px;
   padding-bottom: 15px;
 }
 .footer__wrap {
@@ -305,7 +353,7 @@ footer {
 @media screen and (min-width: 1024px) {
   .header__container {
     padding-top: 29px;
-    padding-bottom: 80px;
+    padding-bottom: 35px;
   }
   .mobile__menu-btn {
     display: none;
@@ -393,7 +441,7 @@ footer {
     letter-spacing: -0.02em;
   }
   .footer__container {
-    padding-top: 78px;
+    padding-top: 33px;
     padding-bottom: 30px;
   }
   .footer__left-part,
