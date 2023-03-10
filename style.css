@@ -158,8 +158,8 @@ header {
   font-weight: 700;
 }
 
-.menu li:hover::after,
-.menu li:focus::after {
+.menu .menu__item:hover>a::after,
+.menu .menu__item:focus>a::after {
   content: '';
   display: block;
   width: 104px;
@@ -210,6 +210,7 @@ header {
   padding: 125px 40px 60px 40px;
   background: #e2edff;
   z-index: -20;
+  overflow-y: scroll;
 }
 
 .mobile__menu-container .menu {
@@ -218,20 +219,44 @@ header {
 }
 
 .mobile__menu-container .menu__item {
+  position: relative;
   margin-bottom: 40px;
 }
 
-.mobile__menu-container .menu__right-part .menu__item:last-child {
-  margin-bottom: 0;
+.mobile__menu-container .menu__item .icon__arrow {
+  width: 15px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.mobile__menu-container .menu__item:hover .icon__arrow,
+.mobile__menu-container .menu__item:focus.icon__arrow {
+  stroke: var(--main-yellow-color);
+  rotate: 91deg;
+  top: 10px;
+  bottom: unset;
 }
 
 .mobile__menu-container .sub__menu li:first-child {
   margin-top: 36px;
+}
+
+.mobile__menu-container .sub__menu li {
   margin-bottom: 22px;
+}
+
+.mobile__menu-container .sub__menu li:last-child {
+  margin-bottom: 0;
 }
 
 .mobile__menu-container .sub__menu.active {
   display: block;
+  font-weight: 400;
 }
 
 .header__inner.active,
@@ -403,7 +428,7 @@ header {
 
 .icon__arrow {
   stroke: var(--main-blue-color);
-  rotate: -90deg;
+  rotate: -89deg;
 }
 
 .biography__left-part-inner .btn__main-arrow {
@@ -635,8 +660,8 @@ footer {
     margin-right: 0;
   }
 
-  .menu li:hover::after,
-  .menu li:focus::after {
+  .menu .menu__item:hover>a::after,
+  .menu .menu__item:focus>a::after {
     position: absolute;
     bottom: 0;
     width: 112px;
