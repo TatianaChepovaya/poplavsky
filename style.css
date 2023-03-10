@@ -148,7 +148,7 @@ header {
 
 .menu {
   display: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 22px;
   color: #3066c2;
 }
@@ -195,11 +195,7 @@ header {
   display: block;
 }
 
-.menu.active {
-  display: block;
-  position: absolute;
-  text-align: center;
-}
+
 
 .mobile__menu-container {
   display: none;
@@ -211,8 +207,31 @@ header {
   width: 100%;
   height: 100vh;
   top: 0;
+  padding: 125px 40px 60px 40px;
   background: #e2edff;
   z-index: -20;
+}
+
+.mobile__menu-container .menu {
+  display: block;
+  position: relative;
+}
+
+.mobile__menu-container .menu__item {
+  margin-bottom: 40px;
+}
+
+.mobile__menu-container .menu__right-part .menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.mobile__menu-container .sub__menu li:first-child {
+  margin-top: 36px;
+  margin-bottom: 22px;
+}
+
+.mobile__menu-container .sub__menu.active {
+  display: block;
 }
 
 .header__inner.active,

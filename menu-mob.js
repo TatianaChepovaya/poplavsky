@@ -10,3 +10,11 @@ $(document).ready(function () {
     $('.corners').toggleClass('active')
   })
 })
+
+$(document).ready(function () {
+  //   console.log("ready!");
+  $('.menu__item').on('click', function () {
+    //  alert();
+    $('.sub__menu').toggleClass('active')
+  })
+})
