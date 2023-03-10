@@ -8,9 +8,17 @@ $(document).ready(function () {
 })
 $(document).ready(function () {
   $('.figures__slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
   })
+})
+
+$(document).ready(function () {
+  if ($(window).width() < 1024) {
+    $('nav.menu__left-part').appendTo('.mobile__menu-container')
+    $('nav.menu__right-part').appendTo('.mobile__menu-container')
+    console.log('1024')
+  }
 })
