@@ -215,7 +215,6 @@ header {
   z-index: -20;
 }
 
-
 .header__inner.active,
 .footer__inner.active {
   background-color: #f6f8fc;
