@@ -531,6 +531,10 @@ header {
 
 }
 
+.letters {
+  display: none;
+}
+
 .btn__arrow-list .btn__main-arrow {
   margin-top: 0;
 }
@@ -650,17 +654,17 @@ footer {
 
 @media screen and (min-width: 768px) {
   .img__m {
-    right: -100px;
-    width: 291px;
-    height: 353px;
+    right: -75px;
+    width: 205px;
+    height: 248px;
   }
 
   .img__p {
 
-    right: -140px;
-    top: 360px;
-    width: 349px;
-    height: 419px;
+    right: -115px;
+    top: 305px;
+    width: 255px;
+    height: 306px;
   }
 
   .title {
@@ -716,6 +720,7 @@ footer {
     transform: scaleX(-1);
     text-align: start;
     padding-left: 52px;
+    padding-right: 0;
   }
 
   .btn__main-arrow {
@@ -744,6 +749,12 @@ footer {
     margin-left: 0;
   }
 
+  .history__container,
+  .biography__left-part-inner {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   .history__right-part {
     position: relative;
   }
@@ -757,28 +768,34 @@ footer {
 
   .history__right-part .base__text p {
     padding-right: 52px;
+    padding-left: 0;
   }
 
   .letters {
+    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
     right: -85px;
     margin: auto 0;
-    height: fit-content;
+    width: 300px;
+    height: 300px;
+  }
+
+  .letters__position {
+    position: relative;
   }
 
   .history .img__m {
-    position: unset;
-    width: 158px;
-    height: 192px;
+    position: absolute;
+    top: 0;
+    right: 12px;
   }
 
   .history .img__p {
-    position: unset;
-    width: 190px;
-    height: 228px;
-    margin-top: -100px;
+    position: absolute;
+    top: 115px;
+    right: -28px;
   }
 
   .figures__container .secondary__title-label {
@@ -927,6 +944,12 @@ footer {
     bottom: 170px;
   }
 
+  .history__container,
+  .biography__left-part-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .history__left-part,
   .history__right-part {
     width: 50%;
@@ -965,28 +988,8 @@ footer {
   }
 
   .letters {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -85px;
-    right: -155px;
-    margin: auto 0;
-    height: fit-content;
-    zoom: 0.7;
+    zoom: 0.85;
   }
-
-  .history .img__m {
-    width: 291px;
-    height: 353px;
-  }
-
-  .history .img__p {
-    width: 349px;
-    height: 419px;
-    margin-top: -180px;
-  }
-
-
 
   .figures__container {
     zoom: 0.85;
@@ -1052,7 +1055,8 @@ footer {
   .header__wrap,
   .footer__container,
   .figures__container,
-  .history__container {
+  .history__container,
+  .letters {
     zoom: 1;
   }
 }
@@ -1062,7 +1066,16 @@ footer {
     width: 39%;
   }
 
-  .letters {
-    zoom: 1;
+  .history .img__m {
+    top: -100px;
+    width: 291px;
+    height: 353px;
+  }
+
+  .history .img__p {
+    top: 80px;
+    right: -22px;
+    width: 349px;
+    height: 419px;
   }
 }
