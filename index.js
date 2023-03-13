@@ -4,14 +4,14 @@ $(document).ready(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    dots: true,
+    /*dots: true,*/
   })
 })
 $(document).ready(function () {
   $('.figures__slider').slick({
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    /*autoplay: true,*/
     autoplaySpeed: 2000,
   })
 })
