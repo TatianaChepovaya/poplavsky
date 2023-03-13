@@ -364,10 +364,12 @@ header {
 }
 
 .secondary__title-label {
+  display: block;
   font-weight: 500;
   font-size: 12px;
   color: var(--main-yellow-color);
   margin-bottom: 7px;
+  margin-top: 24px;
 }
 
 .secondary__title {
@@ -378,7 +380,7 @@ header {
 }
 
 .base__text {
-  height: 195px;
+  height: 26vh;
   overflow-y: scroll;
 
 }
@@ -431,9 +433,16 @@ header {
   rotate: -89deg;
 }
 
-.biography__left-part-inner .btn__main-arrow {
+.biography__left-part-inner .btn__main-arrow,
+.history__right-part .btn__main-arrow {
   flex-direction: row-reverse;
   justify-content: flex-start;
+}
+
+.biography__left-part-inner .btn__main-arrow span,
+.history__right-part .btn__main-arrow span {
+  margin-right: 0;
+  margin-left: 9px;
 }
 
 .biography__right-part .slick-slide img {
@@ -441,6 +450,13 @@ header {
   object-fit: cover;
   object-position: right;
   width: 100%;
+}
+
+.history__right-part .secondary__title-label,
+.history__right-part .secondary__title {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 52px;
 }
 
 .history__right-part .base__text p {
@@ -572,7 +588,88 @@ footer {
   fill: #3066c2;
 }
 
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  background: #DADADA;
+  border: 5px solid #DADADA;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  background-color: var(--main-blue-color);
+  border: 5px solid var(--main-yellow-color);
+}
+
 @media screen and (min-width: 768px) {
+  .title {
+    font-size: 94px;
+    padding: 26px 42px 18px 36px;
+    margin-bottom: 75px;
+  }
+
+  .title__label {
+    font-size: 46px;
+    width: 594px;
+    height: 75px;
+    color: var(--main-blue-color);
+    left: 98px;
+    top: 26px;
+  }
+
+  .title__label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -2px;
+    bottom: -5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 27px;
+    z-index: -1;
+  }
+
+  .secondary__title-label {
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+  }
+
+  .secondary__title {
+    font-size: 76px;
+    margin-bottom: 50px;
+  }
+
+  .base__text p {
+    text-align: start;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    padding-left: 70px;
+  }
+
   .biography .base__text {
     transform: scaleX(-1);
   }
@@ -581,6 +678,32 @@ footer {
     transform: scaleX(-1);
     text-align: start;
     padding-left: 52px;
+  }
+
+  .btn__main-arrow {
+    font-size: 18px;
+    margin-top: 36px;
+  }
+
+  .btn__main-arrow span {
+    width: 50px;
+    height: 50px;
+    margin-right: 23px;
+  }
+
+  .biography__left-part-inner .btn__main-arrow {
+    flex-direction: inherit;
+
+  }
+
+  .biography__left-part-inner .btn__main-arrow span {
+    margin-right: 23px;
+    margin-left: 0;
+  }
+
+  .history__right-part .btn__main-arrow span {
+    margin-right: 0;
+    margin-left: 23px;
   }
 
   .history__right-part .base__text p {
@@ -622,9 +745,11 @@ footer {
   .figures__wrap .btn__arrow-list {
     margin-bottom: 0;
   }
+
+
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .fp-table {
     display: flex;
   }
@@ -668,37 +793,14 @@ footer {
     margin: 0 auto;
   }
 
+  .menu__item .icon__arrow {
+    display: none;
+  }
+
   .person__container {
     position: absolute;
     bottom: 184px;
     left: 184px;
-  }
-
-  .title {
-    font-size: 94px;
-    padding: 26px 42px 18px 36px;
-    margin-bottom: 75px;
-  }
-
-  .title__label {
-    font-size: 46px;
-    width: 594px;
-    height: 75px;
-    color: var(--main-blue-color);
-    left: 98px;
-    top: 26px;
-  }
-
-  .title__label::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: -2px;
-    bottom: -5px;
-    width: 100%;
-    height: 100%;
-    border-radius: 27px;
-    z-index: -1;
   }
 
   .btn__main-screen span {
@@ -741,34 +843,20 @@ footer {
   }
 
   .secondary__title-label {
-    font-size: 16px;
-    margin-bottom: 15px;
+    margin-top: 0;
   }
 
-  .secondary__title {
-    font-size: 76px;
-    margin-bottom: 50px;
+  .secondary__title-label {
+
+    margin-top: 50px;
   }
 
   .biography__left-part-inner {
     max-width: 610px;
   }
 
-  .base__text {
-    height: 420;
-  }
 
-  .base__text p {
-    text-align: start;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-    padding-left: 70px;
-  }
 
-  .btn__main-arrow {
-    font-size: 18px;
-    margin-top: 36px;
-  }
 
   .history__left-part {
     display: block;
