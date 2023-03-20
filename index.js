@@ -14,27 +14,34 @@ $(document).ready(function () {
     /*autoplay: true,*/
     autoplaySpeed: 2000,
     arrows: true,
-    prevArrow:$('.figures_prev'),
-    nextArrow:$('.figures_next'),
+    prevArrow: $('.figures_prev'),
+    nextArrow: $('.figures_next'),
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-
-        }
+        },
       },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
-   
-        }
-      }
+        },
+      },
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
-    ]
+    ],
+  })
+})
+$(document).ready(function () {
+  $('.reward__slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
   })
 })
 
@@ -46,7 +53,6 @@ $(document).ready(function ($) {
   }
 
   new fullpage('#fullpage', {
-    normalScrollElements: '.fp-normal-scroll, .figures__slider, .slick-list'
-  });
-
+    normalScrollElements: '.fp-normal-scroll, .figures__slider, .slick-list',
+  })
 })
