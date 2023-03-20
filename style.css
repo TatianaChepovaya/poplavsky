@@ -43,7 +43,8 @@ ul {
   list-style-type: none;
 }
 
-.container {
+.container,
+.biography__container {
   width: 100%;
   max-width: 1200px;
   padding-right: 20px;
@@ -868,6 +869,7 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+
   .container {
     zoom: 0.74;
   }
@@ -1102,33 +1104,43 @@ footer {
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1515px;
-    zoom: 0.8;
-  }
 
-  .history__left-part {
-    width: 39%;
-  }
+  .container,
+  {
+  max-width: 1515px;
+  zoom: 0.8;
+}
 
-  .history .img__m {
-    top: -100px;
-    width: 291px;
-    height: 353px;
-    margin-right: -26px;
+.biography__left-part {
+  zoom: 0.8;
+  margin-right: -200px;
+}
 
-  }
+.history__left-part {
+  width: 39%;
+}
 
-  .history .img__p {
-    top: 80px;
-    right: -22px;
-    width: 349px;
-    height: 419px;
-  }
+.history .img__m {
+  top: -100px;
+  width: 291px;
+  height: 353px;
+  margin-right: -26px;
+
+}
+
+.history .img__p {
+  top: 80px;
+  right: -22px;
+  width: 349px;
+  height: 419px;
+}
+
 }
 
 @media screen and (min-width: 1515px) {
-  .container {
+
+  .container,
+  .biography__left-part {
     zoom: 0.88;
   }
 
@@ -1138,7 +1150,9 @@ footer {
 }
 
 @media screen and (min-width: 1745px) {
-  .container {
+
+  .container,
+  .biography__left-part {
     zoom: 1;
   }
 
