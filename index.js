@@ -104,6 +104,15 @@ $(document).ready(function () {
   })
 })
 
+$(document).ready(function () {
+  $('.clip__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  })
+})
 $(document).ready(function ($) {
   if ($(window).width() < 1024) {
     $('nav.menu__left-part').appendTo('.mobile__menu-container')
