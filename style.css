@@ -361,7 +361,6 @@ header {
 .person__container-inner {
   position: absolute;
   bottom: 100px;
-  left: 10px;
 }
 
 .person .title__label::after {
@@ -446,7 +445,8 @@ header {
 }
 
 .base__text::-webkit-scrollbar,
-.project__article-left-part::-webkit-scrollbar-thumb {
+.project__article-left-part::-webkit-scrollbar,
+.restaurant-chain__inner::-webkit-scrollbar {
   width: 3px;
   /* ширина для вертикального скролла */
   background-color: #dadada;
@@ -454,11 +454,10 @@ header {
 
 /* ползунок скроллбара */
 .base__text::-webkit-scrollbar-thumb,
-.project__article-left-part::-webkit-scrollbar-thumb {
+.project__article-left-part::-webkit-scrollbar-thumb,
+.restaurant-chain__inner::-webkit-scrollbar-thumb {
   background-color: var(--main-blue-color);
   display: block;
-  width: 7px !important;
-  height: 57px;
 }
 
 .btn__main-arrow {
@@ -1138,7 +1137,86 @@ footer {
   color: #313233;
 }
 
+.photo-gallery {
+  position: relative;
+}
+
+.photo-gallery .figures__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.photo-gallery .clip__slider-title,
+.photo-gallery .btn__arrow-list {
+  margin-bottom: 0;
+}
+
+.photo-gallery__slider .project__article-item img {
+  height: 58vh;
+}
+
+.photo-gallery .clip__slider-title {
+  color: #313233;
+}
+
+.restaurant-chain__inner {
+  overflow-y: scroll;
+  height: 55vh;
+  padding-right: 30px;
+}
+
+.restaurant-chain__part {
+  margin-bottom: 27px;
+}
+
+.restaurant__logo img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 7px;
+}
+
+.restaurant__title {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--main-blue-color);
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+
+.restaurant-chain__part-text p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  color: var(--main-gray-color);
+}
+
+.btn__map {
+  display: block;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--main-blue-color);
+  margin-top: 17px;
+}
+
+.btn__map img {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 13px auto;
+}
+
 @media screen and (min-width:768px) {
+  .container {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+
+
   .letters {
     display: block;
     position: absolute;
@@ -1261,8 +1339,8 @@ footer {
 
   .history__container,
   .biography__left-part-inner {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 55px;
+    padding-right: 55px;
   }
 
   .history__right-part {
@@ -1316,15 +1394,14 @@ footer {
   }
 
   .footer__left-part p {
-    margin-right: 45px;
+    margin-right: 27px;
   }
 
   .footer__right-part p {
-    margin-right: 25px;
+    margin-right: 10px;
   }
 
   .person__container-inner {
-    left: 30px;
     zoom: 0.85;
   }
 
@@ -1437,8 +1514,19 @@ footer {
     height: 24px;
   }
 
-  .books .letters {
+  .books .letters,
+  .photo-gallery .letters,
+  .restaurant-chain .letters {
     display: none;
+  }
+
+  .photo-gallery__slider .project__article-item img {
+    width: 100%;
+  }
+
+  .restaurant-chain__part {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -1451,6 +1539,8 @@ footer {
 
 @media screen and (min-width: 1024px) {
   .container {
+    padding-left: 20px;
+    padding-right: 20px;
     zoom: 0.74;
   }
 
@@ -1466,6 +1556,14 @@ footer {
   .header__wrap,
   .footer__wrap {
     zoom: 0.8;
+  }
+
+  .footer__left-part p {
+    margin-right: 45px;
+  }
+
+  .footer__right-part p {
+    margin-right: 25px;
   }
 
   .mobile__menu-btn {
@@ -1508,7 +1606,6 @@ footer {
 
   .person__container-inner {
     bottom: 130px;
-    left: 0;
     zoom: 1;
   }
 
@@ -1908,8 +2005,48 @@ footer {
     right: 0;
   }
 
-  .books .letters {
+  .books .letters,
+  .photo-gallery .letters,
+  .restaurant-chain .letters {
     display: block;
+  }
+
+  .photo-gallery__slider .slick-dots {
+    bottom: 60px;
+  }
+
+  .restaurant-chain__part {
+    margin-bottom: 50px;
+  }
+
+  .restaurant__logo img {
+    width: 326px;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .restaurant__title {
+    font-size: 28px;
+    margin-bottom: 27px;
+  }
+
+  .restaurant-chain__part-text {
+    width: 46%;
+  }
+
+  .restaurant-chain__part-text p {
+    font-size: 22px;
+  }
+
+  .btn__map {
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  .btn__map img {
+    width: 57px;
+    height: 57px;
+    margin: 0 auto 13px auto;
   }
 }
 
@@ -1984,11 +2121,6 @@ footer {
 
   .history__wrap {
     justify-content: space-between;
-  }
-
-
-  .slick-dotted.slick-slider {
-    margin-bottom: 0;
   }
 }
 

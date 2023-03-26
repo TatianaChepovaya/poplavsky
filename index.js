@@ -113,6 +113,15 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
   })
 })
+$(document).ready(function () {
+  $('.photo-gallery__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+  })
+})
 $(document).ready(function ($) {
   if ($(window).width() < 1024) {
     $('nav.menu__left-part').appendTo('.mobile__menu-container')
