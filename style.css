@@ -567,6 +567,7 @@ header {
 .history__left-part {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 28px;
 }
 
 .history__left-part img {
@@ -1343,8 +1344,16 @@ footer {
     padding-right: 55px;
   }
 
+  .history__left-part {
+    margin-bottom: 85px;
+  }
+
   .history__right-part {
     position: relative;
+  }
+
+  .history .letters {
+    display: none;
   }
 
   .history__right-part .btn__main-arrow span {
@@ -1678,6 +1687,10 @@ footer {
     z-index: -1;
   }
 
+  .history .letters {
+    display: block;
+  }
+
   .history__left-part,
   .history__right-part {
     width: 50%;
@@ -1692,6 +1705,7 @@ footer {
     display: block;
     width: 43%;
     margin-right: 40px;
+    margin-bottom: 0;
   }
 
   .history__left-part img {
@@ -2100,7 +2114,9 @@ footer {
 
 }
 
-@media screen and (min-width: 1515px) {
+@media screen and (min-width: 1515px) {}
+
+@media screen and (min-width: 1600px) {
 
   .container,
   .biography__left-part {
